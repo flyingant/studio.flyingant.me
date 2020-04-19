@@ -100,10 +100,13 @@ module.exports = {
     extractCustomerStyle,
     new HtmlWebpackPlugin({
       title: 'Studio | MaYi',
-      template: 'src/templates/index.html'
+      template: 'src/templates/index.html',
     }),
     new CopyWebpackPlugin([
       {from: './src/assets', to: './assets'}
+    ]),
+    new CopyWebpackPlugin([
+      {from: 'CNAME', to: './'}
     ])
   ]
 };
